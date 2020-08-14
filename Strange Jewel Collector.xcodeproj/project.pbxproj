@@ -285,7 +285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85254P39JJ;
+				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,7 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85254P39JJ;
+				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
