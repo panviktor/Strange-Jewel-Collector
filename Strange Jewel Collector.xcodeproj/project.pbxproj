@@ -3,31 +3,171 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		14733E0424E6E7B200298446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14733E0324E6E7B200298446 /* AppDelegate.swift */; };
-		14733E0624E6E7B200298446 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14733E0524E6E7B200298446 /* SceneDelegate.swift */; };
-		14733E0824E6E7B200298446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14733E0724E6E7B200298446 /* ViewController.swift */; };
-		14733E0B24E6E7B200298446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14733E0924E6E7B200298446 /* Main.storyboard */; };
-		14733E0D24E6E7B600298446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14733E0C24E6E7B600298446 /* Assets.xcassets */; };
-		14733E1024E6E7B600298446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14733E0E24E6E7B600298446 /* LaunchScreen.storyboard */; };
+		774FD5F324E947AE009F98DE /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 774FD5F224E947AE009F98DE /* Reachability */; };
+		774FD5F624E947FC009F98DE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 774FD5F524E947FC009F98DE /* Lottie */; };
+		774FD5F924E94851009F98DE /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 774FD5F824E94851009F98DE /* DeviceKit */; };
+		774FD5FC24E948F2009F98DE /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 774FD5FB24E948F2009F98DE /* FacebookCore */; };
+		774FD60624E94A48009F98DE /* ReachabilityObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD5FD24E94A47009F98DE /* ReachabilityObserverDelegate.swift */; };
+		774FD60724E94A48009F98DE /* DifferentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD5FE24E94A48009F98DE /* DifferentServices.swift */; };
+		774FD60824E94A48009F98DE /* Extension+DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD60024E94A48009F98DE /* Extension+DispatchQueue.swift */; };
+		774FD60924E94A48009F98DE /* Extension+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD60124E94A48009F98DE /* Extension+URL.swift */; };
+		774FD60A24E94A48009F98DE /* Extensions+Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD60224E94A48009F98DE /* Extensions+Game.swift */; };
+		774FD60B24E94A48009F98DE /* Extension+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD60324E94A48009F98DE /* Extension+Collection.swift */; };
+		774FD60C24E94A48009F98DE /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD60424E94A48009F98DE /* Extension+UIView.swift */; };
+		774FD60D24E94A48009F98DE /* Extension+WKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD60524E94A48009F98DE /* Extension+WKWebView.swift */; };
+		774FD64B24E94AA8009F98DE /* WKweb.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61024E94AA5009F98DE /* WKweb.storyboard */; };
+		774FD64C24E94AA8009F98DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61124E94AA5009F98DE /* LaunchScreen.storyboard */; };
+		774FD64D24E94AA8009F98DE /* GIFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61424E94AA5009F98DE /* GIFViewController.xib */; };
+		774FD64E24E94AA8009F98DE /* SecondNoInternetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61524E94AA5009F98DE /* SecondNoInternetViewController.xib */; };
+		774FD64F24E94AA8009F98DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61724E94AA7009F98DE /* Assets.xcassets */; };
+		774FD65024E94AA8009F98DE /* Particle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61924E94AA7009F98DE /* Particle.sks */; };
+		774FD65124E94AA8009F98DE /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61A24E94AA7009F98DE /* Rain.sks */; };
+		774FD65224E94AA8009F98DE /* Particle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61B24E94AA7009F98DE /* Particle@2x.png */; };
+		774FD65324E94AA8009F98DE /* gradientMonoTone.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61C24E94AA7009F98DE /* gradientMonoTone.fsh */; };
+		774FD65424E94AA8009F98DE /* Particle.png in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61D24E94AA7009F98DE /* Particle.png */; };
+		774FD65524E94AA8009F98DE /* CheeZeeJungle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 774FD61F24E94AA7009F98DE /* CheeZeeJungle.caf */; };
+		774FD65624E94AA8009F98DE /* NomNom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 774FD62024E94AA7009F98DE /* NomNom.caf */; };
+		774FD65724E94AA8009F98DE /* Slice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 774FD62124E94AA7009F98DE /* Slice.caf */; };
+		774FD65824E94AA8009F98DE /* Splash.caf in Resources */ = {isa = PBXBuildFile; fileRef = 774FD62224E94AA7009F98DE /* Splash.caf */; };
+		774FD65924E94AA8009F98DE /* no-internet-connection.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD62324E94AA7009F98DE /* no-internet-connection.json */; };
+		774FD65A24E94AA8009F98DE /* SecondNoInternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD62624E94AA7009F98DE /* SecondNoInternetViewController.swift */; };
+		774FD65B24E94AA8009F98DE /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD62724E94AA7009F98DE /* WebViewController.swift */; };
+		774FD65C24E94AA8009F98DE /* GIFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD62824E94AA7009F98DE /* GIFViewController.swift */; };
+		774FD65D24E94AA8009F98DE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD62B24E94AA7009F98DE /* GameViewController.swift */; };
+		774FD65E24E94AA8009F98DE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD62C24E94AA7009F98DE /* WelcomeViewController.swift */; };
+		774FD65F24E94AA8009F98DE /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD62F24E94AA7009F98DE /* SceneManager.swift */; };
+		774FD66024E94AA8009F98DE /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63024E94AA7009F98DE /* GameManager.swift */; };
+		774FD66124E94AA8009F98DE /* AudioVibroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63124E94AA7009F98DE /* AudioVibroManager.swift */; };
+		774FD66224E94AA8009F98DE /* Infobar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63224E94AA7009F98DE /* Infobar.swift */; };
+		774FD66324E94AA8009F98DE /* GameSettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63324E94AA7009F98DE /* GameSettingsScene.swift */; };
+		774FD66424E94AA8009F98DE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63424E94AA7009F98DE /* GameScene.swift */; };
+		774FD66524E94AA8009F98DE /* TopScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63524E94AA7009F98DE /* TopScoreScene.swift */; };
+		774FD66624E94AA8009F98DE /* EndChapterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63624E94AA7009F98DE /* EndChapterScene.swift */; };
+		774FD66724E94AA8009F98DE /* WinLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63724E94AA7009F98DE /* WinLevelScene.swift */; };
+		774FD66824E94AA8009F98DE /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63824E94AA7009F98DE /* MainScene.swift */; };
+		774FD66924E94AA8009F98DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63B24E94AA8009F98DE /* Constants.swift */; };
+		774FD66A24E94AA8009F98DE /* VineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63C24E94AA8009F98DE /* VineNode.swift */; };
+		774FD66B24E94AA8009F98DE /* WoodNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63D24E94AA8009F98DE /* WoodNode.swift */; };
+		774FD66C24E94AA8009F98DE /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63E24E94AA8009F98DE /* LevelData.swift */; };
+		774FD66D24E94AA8009F98DE /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD63F24E94AA8009F98DE /* Level.swift */; };
+		774FD66E24E94AA8009F98DE /* Level_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64124E94AA8009F98DE /* Level_2.json */; };
+		774FD66F24E94AA8009F98DE /* Level_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64224E94AA8009F98DE /* Level_3.json */; };
+		774FD67024E94AA8009F98DE /* Level_8.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64324E94AA8009F98DE /* Level_8.json */; };
+		774FD67124E94AA8009F98DE /* Level_4.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64424E94AA8009F98DE /* Level_4.json */; };
+		774FD67224E94AA8009F98DE /* Level_5.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64524E94AA8009F98DE /* Level_5.json */; };
+		774FD67324E94AA8009F98DE /* Level_9.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64624E94AA8009F98DE /* Level_9.json */; };
+		774FD67424E94AA8009F98DE /* Level_6.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64724E94AA8009F98DE /* Level_6.json */; };
+		774FD67524E94AA8009F98DE /* Level_10.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64824E94AA8009F98DE /* Level_10.json */; };
+		774FD67624E94AA8009F98DE /* Level_7.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64924E94AA8009F98DE /* Level_7.json */; };
+		774FD67724E94AA8009F98DE /* Level_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64A24E94AA8009F98DE /* Level_1.json */; };
+		774FD67F24E94BAE009F98DE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD67E24E94BAE009F98DE /* NotificationService.swift */; };
+		774FD68324E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 774FD67C24E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		774FD68124E94BAE009F98DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14733DF824E6E7B200298446 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 774FD67B24E94BAE009F98DE;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		774FD68724E94BAE009F98DE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				774FD68324E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		14733E0024E6E7B200298446 /* Strange Jewel Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Strange Jewel Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14733E0324E6E7B200298446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14733E0524E6E7B200298446 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		14733E0724E6E7B200298446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		14733E0A24E6E7B200298446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		14733E0C24E6E7B600298446 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14733E0F24E6E7B600298446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14733E1124E6E7B600298446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		774FD5FD24E94A47009F98DE /* ReachabilityObserverDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityObserverDelegate.swift; sourceTree = "<group>"; };
+		774FD5FE24E94A48009F98DE /* DifferentServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifferentServices.swift; sourceTree = "<group>"; };
+		774FD60024E94A48009F98DE /* Extension+DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+DispatchQueue.swift"; sourceTree = "<group>"; };
+		774FD60124E94A48009F98DE /* Extension+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+URL.swift"; sourceTree = "<group>"; };
+		774FD60224E94A48009F98DE /* Extensions+Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Game.swift"; sourceTree = "<group>"; };
+		774FD60324E94A48009F98DE /* Extension+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Collection.swift"; sourceTree = "<group>"; };
+		774FD60424E94A48009F98DE /* Extension+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		774FD60524E94A48009F98DE /* Extension+WKWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+WKWebView.swift"; sourceTree = "<group>"; };
+		774FD61024E94AA5009F98DE /* WKweb.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WKweb.storyboard; sourceTree = "<group>"; };
+		774FD61224E94AA5009F98DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		774FD61424E94AA5009F98DE /* GIFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFViewController.xib; sourceTree = "<group>"; };
+		774FD61524E94AA5009F98DE /* SecondNoInternetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondNoInternetViewController.xib; sourceTree = "<group>"; };
+		774FD61724E94AA7009F98DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		774FD61924E94AA7009F98DE /* Particle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Particle.sks; sourceTree = "<group>"; };
+		774FD61A24E94AA7009F98DE /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
+		774FD61B24E94AA7009F98DE /* Particle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Particle@2x.png"; sourceTree = "<group>"; };
+		774FD61C24E94AA7009F98DE /* gradientMonoTone.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gradientMonoTone.fsh; sourceTree = "<group>"; };
+		774FD61D24E94AA7009F98DE /* Particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle.png; sourceTree = "<group>"; };
+		774FD61F24E94AA7009F98DE /* CheeZeeJungle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CheeZeeJungle.caf; sourceTree = "<group>"; };
+		774FD62024E94AA7009F98DE /* NomNom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NomNom.caf; sourceTree = "<group>"; };
+		774FD62124E94AA7009F98DE /* Slice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Slice.caf; sourceTree = "<group>"; };
+		774FD62224E94AA7009F98DE /* Splash.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Splash.caf; sourceTree = "<group>"; };
+		774FD62324E94AA7009F98DE /* no-internet-connection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "no-internet-connection.json"; sourceTree = "<group>"; };
+		774FD62624E94AA7009F98DE /* SecondNoInternetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondNoInternetViewController.swift; sourceTree = "<group>"; };
+		774FD62724E94AA7009F98DE /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		774FD62824E94AA7009F98DE /* GIFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFViewController.swift; sourceTree = "<group>"; };
+		774FD62B24E94AA7009F98DE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		774FD62C24E94AA7009F98DE /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		774FD62F24E94AA7009F98DE /* SceneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		774FD63024E94AA7009F98DE /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		774FD63124E94AA7009F98DE /* AudioVibroManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioVibroManager.swift; sourceTree = "<group>"; };
+		774FD63224E94AA7009F98DE /* Infobar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infobar.swift; sourceTree = "<group>"; };
+		774FD63324E94AA7009F98DE /* GameSettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingsScene.swift; sourceTree = "<group>"; };
+		774FD63424E94AA7009F98DE /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		774FD63524E94AA7009F98DE /* TopScoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopScoreScene.swift; sourceTree = "<group>"; };
+		774FD63624E94AA7009F98DE /* EndChapterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndChapterScene.swift; sourceTree = "<group>"; };
+		774FD63724E94AA7009F98DE /* WinLevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinLevelScene.swift; sourceTree = "<group>"; };
+		774FD63824E94AA7009F98DE /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		774FD63B24E94AA8009F98DE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		774FD63C24E94AA8009F98DE /* VineNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VineNode.swift; sourceTree = "<group>"; };
+		774FD63D24E94AA8009F98DE /* WoodNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoodNode.swift; sourceTree = "<group>"; };
+		774FD63E24E94AA8009F98DE /* LevelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
+		774FD63F24E94AA8009F98DE /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		774FD64124E94AA8009F98DE /* Level_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_2.json; sourceTree = "<group>"; };
+		774FD64224E94AA8009F98DE /* Level_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_3.json; sourceTree = "<group>"; };
+		774FD64324E94AA8009F98DE /* Level_8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_8.json; sourceTree = "<group>"; };
+		774FD64424E94AA8009F98DE /* Level_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_4.json; sourceTree = "<group>"; };
+		774FD64524E94AA8009F98DE /* Level_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_5.json; sourceTree = "<group>"; };
+		774FD64624E94AA8009F98DE /* Level_9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_9.json; sourceTree = "<group>"; };
+		774FD64724E94AA8009F98DE /* Level_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_6.json; sourceTree = "<group>"; };
+		774FD64824E94AA8009F98DE /* Level_10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_10.json; sourceTree = "<group>"; };
+		774FD64924E94AA8009F98DE /* Level_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_7.json; sourceTree = "<group>"; };
+		774FD64A24E94AA8009F98DE /* Level_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_1.json; sourceTree = "<group>"; };
+		774FD67C24E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		774FD67E24E94BAE009F98DE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		774FD68024E94BAE009F98DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		14733DFD24E6E7B200298446 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				774FD5F324E947AE009F98DE /* Reachability in Frameworks */,
+				774FD5F624E947FC009F98DE /* Lottie in Frameworks */,
+				774FD5F924E94851009F98DE /* DeviceKit in Frameworks */,
+				774FD5FC24E948F2009F98DE /* FacebookCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		774FD67924E94BAE009F98DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				14733E0224E6E7B200298446 /* Strange Jewel Collector */,
+				774FD67D24E94BAE009F98DE /* OneSignalNotificationServiceExtension */,
 				14733E0124E6E7B200298446 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				14733E0024E6E7B200298446 /* Strange Jewel Collector.app */,
+				774FD67C24E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +198,208 @@
 		14733E0224E6E7B200298446 /* Strange Jewel Collector */ = {
 			isa = PBXGroup;
 			children = (
-				14733E0324E6E7B200298446 /* AppDelegate.swift */,
-				14733E0524E6E7B200298446 /* SceneDelegate.swift */,
-				14733E0724E6E7B200298446 /* ViewController.swift */,
-				14733E0924E6E7B200298446 /* Main.storyboard */,
-				14733E0C24E6E7B600298446 /* Assets.xcassets */,
-				14733E0E24E6E7B600298446 /* LaunchScreen.storyboard */,
 				14733E1124E6E7B600298446 /* Info.plist */,
+				774FD5F024E9469D009F98DE /* App */,
+				774FD63924E94AA8009F98DE /* Model */,
+				774FD60E24E94AA5009F98DE /* View */,
+				774FD62424E94AA7009F98DE /* Controller */,
+				774FD61624E94AA7009F98DE /* Resources */,
 			);
 			path = "Strange Jewel Collector";
+			sourceTree = "<group>";
+		};
+		774FD5F024E9469D009F98DE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				14733E0324E6E7B200298446 /* AppDelegate.swift */,
+				774FD5FE24E94A48009F98DE /* DifferentServices.swift */,
+				774FD5FF24E94A48009F98DE /* Library */,
+				774FD5FD24E94A47009F98DE /* ReachabilityObserverDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		774FD5FF24E94A48009F98DE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				774FD60024E94A48009F98DE /* Extension+DispatchQueue.swift */,
+				774FD60124E94A48009F98DE /* Extension+URL.swift */,
+				774FD60224E94A48009F98DE /* Extensions+Game.swift */,
+				774FD60324E94A48009F98DE /* Extension+Collection.swift */,
+				774FD60424E94A48009F98DE /* Extension+UIView.swift */,
+				774FD60524E94A48009F98DE /* Extension+WKWebView.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		774FD60E24E94AA5009F98DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				774FD60F24E94AA5009F98DE /* Storyboards */,
+				774FD61324E94AA5009F98DE /* Xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		774FD60F24E94AA5009F98DE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				774FD61024E94AA5009F98DE /* WKweb.storyboard */,
+				774FD61124E94AA5009F98DE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		774FD61324E94AA5009F98DE /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				774FD61424E94AA5009F98DE /* GIFViewController.xib */,
+				774FD61524E94AA5009F98DE /* SecondNoInternetViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		774FD61624E94AA7009F98DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				774FD61724E94AA7009F98DE /* Assets.xcassets */,
+				774FD61824E94AA7009F98DE /* Particles */,
+				774FD61E24E94AA7009F98DE /* Sounds */,
+				774FD62324E94AA7009F98DE /* no-internet-connection.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		774FD61824E94AA7009F98DE /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				774FD61924E94AA7009F98DE /* Particle.sks */,
+				774FD61A24E94AA7009F98DE /* Rain.sks */,
+				774FD61B24E94AA7009F98DE /* Particle@2x.png */,
+				774FD61C24E94AA7009F98DE /* gradientMonoTone.fsh */,
+				774FD61D24E94AA7009F98DE /* Particle.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		774FD61E24E94AA7009F98DE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				774FD61F24E94AA7009F98DE /* CheeZeeJungle.caf */,
+				774FD62024E94AA7009F98DE /* NomNom.caf */,
+				774FD62124E94AA7009F98DE /* Slice.caf */,
+				774FD62224E94AA7009F98DE /* Splash.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		774FD62424E94AA7009F98DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				774FD62524E94AA7009F98DE /* Web */,
+				774FD62924E94AA7009F98DE /* Game */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		774FD62524E94AA7009F98DE /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				774FD62624E94AA7009F98DE /* SecondNoInternetViewController.swift */,
+				774FD62724E94AA7009F98DE /* WebViewController.swift */,
+				774FD62824E94AA7009F98DE /* GIFViewController.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		774FD62924E94AA7009F98DE /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				774FD62A24E94AA7009F98DE /* GameViewController */,
+				774FD62D24E94AA7009F98DE /* Scene */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		774FD62A24E94AA7009F98DE /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				774FD62B24E94AA7009F98DE /* GameViewController.swift */,
+				774FD62C24E94AA7009F98DE /* WelcomeViewController.swift */,
+			);
+			path = GameViewController;
+			sourceTree = "<group>";
+		};
+		774FD62D24E94AA7009F98DE /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				774FD62E24E94AA7009F98DE /* Managers */,
+				774FD63224E94AA7009F98DE /* Infobar.swift */,
+				774FD63324E94AA7009F98DE /* GameSettingsScene.swift */,
+				774FD63424E94AA7009F98DE /* GameScene.swift */,
+				774FD63524E94AA7009F98DE /* TopScoreScene.swift */,
+				774FD63624E94AA7009F98DE /* EndChapterScene.swift */,
+				774FD63724E94AA7009F98DE /* WinLevelScene.swift */,
+				774FD63824E94AA7009F98DE /* MainScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		774FD62E24E94AA7009F98DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				774FD62F24E94AA7009F98DE /* SceneManager.swift */,
+				774FD63024E94AA7009F98DE /* GameManager.swift */,
+				774FD63124E94AA7009F98DE /* AudioVibroManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		774FD63924E94AA8009F98DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				774FD63A24E94AA8009F98DE /* GameModel */,
+				774FD64024E94AA8009F98DE /* Levels */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		774FD63A24E94AA8009F98DE /* GameModel */ = {
+			isa = PBXGroup;
+			children = (
+				774FD63B24E94AA8009F98DE /* Constants.swift */,
+				774FD63C24E94AA8009F98DE /* VineNode.swift */,
+				774FD63D24E94AA8009F98DE /* WoodNode.swift */,
+				774FD63E24E94AA8009F98DE /* LevelData.swift */,
+				774FD63F24E94AA8009F98DE /* Level.swift */,
+			);
+			path = GameModel;
+			sourceTree = "<group>";
+		};
+		774FD64024E94AA8009F98DE /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				774FD64124E94AA8009F98DE /* Level_2.json */,
+				774FD64224E94AA8009F98DE /* Level_3.json */,
+				774FD64324E94AA8009F98DE /* Level_8.json */,
+				774FD64424E94AA8009F98DE /* Level_4.json */,
+				774FD64524E94AA8009F98DE /* Level_5.json */,
+				774FD64624E94AA8009F98DE /* Level_9.json */,
+				774FD64724E94AA8009F98DE /* Level_6.json */,
+				774FD64824E94AA8009F98DE /* Level_10.json */,
+				774FD64924E94AA8009F98DE /* Level_7.json */,
+				774FD64A24E94AA8009F98DE /* Level_1.json */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		774FD67D24E94BAE009F98DE /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				774FD67E24E94BAE009F98DE /* NotificationService.swift */,
+				774FD68024E94BAE009F98DE /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +412,40 @@
 				14733DFC24E6E7B200298446 /* Sources */,
 				14733DFD24E6E7B200298446 /* Frameworks */,
 				14733DFE24E6E7B200298446 /* Resources */,
+				774FD68724E94BAE009F98DE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				774FD68224E94BAE009F98DE /* PBXTargetDependency */,
+			);
+			name = "Strange Jewel Collector";
+			packageProductDependencies = (
+				774FD5F224E947AE009F98DE /* Reachability */,
+				774FD5F524E947FC009F98DE /* Lottie */,
+				774FD5F824E94851009F98DE /* DeviceKit */,
+				774FD5FB24E948F2009F98DE /* FacebookCore */,
+			);
+			productName = "Strange Jewel Collector";
+			productReference = 14733E0024E6E7B200298446 /* Strange Jewel Collector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		774FD67B24E94BAE009F98DE /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 774FD68424E94BAE009F98DE /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				774FD67824E94BAE009F98DE /* Sources */,
+				774FD67924E94BAE009F98DE /* Frameworks */,
+				774FD67A24E94BAE009F98DE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Strange Jewel Collector";
-			productName = "Strange Jewel Collector";
-			productReference = 14733E0024E6E7B200298446 /* Strange Jewel Collector.app */;
-			productType = "com.apple.product-type.application";
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 774FD67C24E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +460,9 @@
 					14733DFF24E6E7B200298446 = {
 						CreatedOnToolsVersion = 11.6;
 					};
+					774FD67B24E94BAE009F98DE = {
+						CreatedOnToolsVersion = 11.6;
+					};
 				};
 			};
 			buildConfigurationList = 14733DFB24E6E7B200298446 /* Build configuration list for PBXProject "Strange Jewel Collector" */;
@@ -111,11 +474,18 @@
 				Base,
 			);
 			mainGroup = 14733DF724E6E7B200298446;
+			packageReferences = (
+				774FD5F124E947AE009F98DE /* XCRemoteSwiftPackageReference "Reachability" */,
+				774FD5F424E947FC009F98DE /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				774FD5F724E94851009F98DE /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				774FD5FA24E948F2009F98DE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 14733E0124E6E7B200298446 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				14733DFF24E6E7B200298446 /* Strange Jewel Collector */,
+				774FD67B24E94BAE009F98DE /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -125,9 +495,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14733E1024E6E7B600298446 /* LaunchScreen.storyboard in Resources */,
-				14733E0D24E6E7B600298446 /* Assets.xcassets in Resources */,
-				14733E0B24E6E7B200298446 /* Main.storyboard in Resources */,
+				774FD65324E94AA8009F98DE /* gradientMonoTone.fsh in Resources */,
+				774FD67324E94AA8009F98DE /* Level_9.json in Resources */,
+				774FD67124E94AA8009F98DE /* Level_4.json in Resources */,
+				774FD67024E94AA8009F98DE /* Level_8.json in Resources */,
+				774FD65224E94AA8009F98DE /* Particle@2x.png in Resources */,
+				774FD67524E94AA8009F98DE /* Level_10.json in Resources */,
+				774FD64E24E94AA8009F98DE /* SecondNoInternetViewController.xib in Resources */,
+				774FD65024E94AA8009F98DE /* Particle.sks in Resources */,
+				774FD67424E94AA8009F98DE /* Level_6.json in Resources */,
+				774FD65124E94AA8009F98DE /* Rain.sks in Resources */,
+				774FD67624E94AA8009F98DE /* Level_7.json in Resources */,
+				774FD67724E94AA8009F98DE /* Level_1.json in Resources */,
+				774FD64D24E94AA8009F98DE /* GIFViewController.xib in Resources */,
+				774FD65624E94AA8009F98DE /* NomNom.caf in Resources */,
+				774FD65524E94AA8009F98DE /* CheeZeeJungle.caf in Resources */,
+				774FD64B24E94AA8009F98DE /* WKweb.storyboard in Resources */,
+				774FD64C24E94AA8009F98DE /* LaunchScreen.storyboard in Resources */,
+				774FD64F24E94AA8009F98DE /* Assets.xcassets in Resources */,
+				774FD65924E94AA8009F98DE /* no-internet-connection.json in Resources */,
+				774FD65724E94AA8009F98DE /* Slice.caf in Resources */,
+				774FD66F24E94AA8009F98DE /* Level_3.json in Resources */,
+				774FD67224E94AA8009F98DE /* Level_5.json in Resources */,
+				774FD66E24E94AA8009F98DE /* Level_2.json in Resources */,
+				774FD65424E94AA8009F98DE /* Particle.png in Resources */,
+				774FD65824E94AA8009F98DE /* Splash.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		774FD67A24E94BAE009F98DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,27 +537,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14733E0824E6E7B200298446 /* ViewController.swift in Sources */,
+				774FD66924E94AA8009F98DE /* Constants.swift in Sources */,
+				774FD66D24E94AA8009F98DE /* Level.swift in Sources */,
+				774FD66524E94AA8009F98DE /* TopScoreScene.swift in Sources */,
 				14733E0424E6E7B200298446 /* AppDelegate.swift in Sources */,
-				14733E0624E6E7B200298446 /* SceneDelegate.swift in Sources */,
+				774FD66A24E94AA8009F98DE /* VineNode.swift in Sources */,
+				774FD66024E94AA8009F98DE /* GameManager.swift in Sources */,
+				774FD65B24E94AA8009F98DE /* WebViewController.swift in Sources */,
+				774FD60A24E94A48009F98DE /* Extensions+Game.swift in Sources */,
+				774FD65A24E94AA8009F98DE /* SecondNoInternetViewController.swift in Sources */,
+				774FD66C24E94AA8009F98DE /* LevelData.swift in Sources */,
+				774FD65D24E94AA8009F98DE /* GameViewController.swift in Sources */,
+				774FD60C24E94A48009F98DE /* Extension+UIView.swift in Sources */,
+				774FD60D24E94A48009F98DE /* Extension+WKWebView.swift in Sources */,
+				774FD65F24E94AA8009F98DE /* SceneManager.swift in Sources */,
+				774FD66B24E94AA8009F98DE /* WoodNode.swift in Sources */,
+				774FD60824E94A48009F98DE /* Extension+DispatchQueue.swift in Sources */,
+				774FD66424E94AA8009F98DE /* GameScene.swift in Sources */,
+				774FD60724E94A48009F98DE /* DifferentServices.swift in Sources */,
+				774FD60924E94A48009F98DE /* Extension+URL.swift in Sources */,
+				774FD66324E94AA8009F98DE /* GameSettingsScene.swift in Sources */,
+				774FD60624E94A48009F98DE /* ReachabilityObserverDelegate.swift in Sources */,
+				774FD66224E94AA8009F98DE /* Infobar.swift in Sources */,
+				774FD66724E94AA8009F98DE /* WinLevelScene.swift in Sources */,
+				774FD66124E94AA8009F98DE /* AudioVibroManager.swift in Sources */,
+				774FD66624E94AA8009F98DE /* EndChapterScene.swift in Sources */,
+				774FD60B24E94A48009F98DE /* Extension+Collection.swift in Sources */,
+				774FD66824E94AA8009F98DE /* MainScene.swift in Sources */,
+				774FD65C24E94AA8009F98DE /* GIFViewController.swift in Sources */,
+				774FD65E24E94AA8009F98DE /* WelcomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		774FD67824E94BAE009F98DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				774FD67F24E94BAE009F98DE /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		14733E0924E6E7B200298446 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14733E0A24E6E7B200298446 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		774FD68224E94BAE009F98DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 774FD67B24E94BAE009F98DE /* OneSignalNotificationServiceExtension */;
+			targetProxy = 774FD68124E94BAE009F98DE /* PBXContainerItemProxy */;
 		};
-		14733E0E24E6E7B600298446 /* LaunchScreen.storyboard */ = {
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		774FD61124E94AA5009F98DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14733E0F24E6E7B600298446 /* Base */,
+				774FD61224E94AA5009F98DE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -216,7 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,10 +716,12 @@
 		14733E1524E6E7B600298446 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,17 +729,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		14733E1624E6E7B600298446 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +749,47 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		774FD68524E94BAE009F98DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2335GSPY5N;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		774FD68624E94BAE009F98DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2335GSPY5N;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -337,7 +814,74 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		774FD68424E94BAE009F98DE /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				774FD68524E94BAE009F98DE /* Debug */,
+				774FD68624E94BAE009F98DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		774FD5F124E947AE009F98DE /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		774FD5F424E947FC009F98DE /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+		774FD5F724E94851009F98DE /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+		774FD5FA24E948F2009F98DE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		774FD5F224E947AE009F98DE /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 774FD5F124E947AE009F98DE /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+		774FD5F524E947FC009F98DE /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 774FD5F424E947FC009F98DE /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		774FD5F824E94851009F98DE /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 774FD5F724E94851009F98DE /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
+		774FD5FB24E948F2009F98DE /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 774FD5FA24E948F2009F98DE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14733DF824E6E7B200298446 /* Project object */;
 }

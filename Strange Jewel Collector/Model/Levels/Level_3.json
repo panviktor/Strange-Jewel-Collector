@@ -1,0 +1,25 @@
+{
+  "levelName": "Ghost",
+  "levelNumber": 3,
+  
+  "heroesPosition": {"x": 0.35, "y": 0.312},
+  "prizeType": 1,
+  "prizePosition": {"x": 0.55, "y": 0.9},
+  
+  "vines": [{
+    "length": 26,
+    "xAnchorPoint": 0.1187,
+    "yAnchorPoint": 0.9383
+  },
+  
+  {  "length": 28,
+    "xAnchorPoint": 0.85,
+    "yAnchorPoint": 0.5996
+  },
+  {
+    "length": 10,
+    "xAnchorPoint": 0.8593,
+    "yAnchorPoint": 0.9588
+  }
+  ],
+}
