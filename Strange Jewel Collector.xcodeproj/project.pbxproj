@@ -67,6 +67,8 @@
 		774FD67724E94AA8009F98DE /* Level_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 774FD64A24E94AA8009F98DE /* Level_1.json */; };
 		774FD67F24E94BAE009F98DE /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FD67E24E94BAE009F98DE /* NotificationService.swift */; };
 		774FD68324E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 774FD67C24E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A069E10A591A8D4BF9771287 /* libPods-Strange Jewel Collector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C602D501F3D5561181AB522 /* libPods-Strange Jewel Collector.a */; };
+		E389E065E29B6B500119A189 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 052DFBE88F1A0A7153CFA2B3 /* libPods-OneSignalNotificationServiceExtension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,9 +96,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		052DFBE88F1A0A7153CFA2B3 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14733E0024E6E7B200298446 /* Strange Jewel Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Strange Jewel Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14733E0324E6E7B200298446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14733E1124E6E7B600298446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14C6246624EA664100F625E6 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		14C6246724EA692300F625E6 /* Strange Jewel Collector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Strange Jewel Collector.entitlements"; sourceTree = "<group>"; };
+		1DF240A2C1B55C26081BB912 /* Pods-Strange Jewel Collector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strange Jewel Collector.release.xcconfig"; path = "Target Support Files/Pods-Strange Jewel Collector/Pods-Strange Jewel Collector.release.xcconfig"; sourceTree = "<group>"; };
+		3C602D501F3D5561181AB522 /* libPods-Strange Jewel Collector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Strange Jewel Collector.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		774FD5FD24E94A47009F98DE /* ReachabilityObserverDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityObserverDelegate.swift; sourceTree = "<group>"; };
 		774FD5FE24E94A48009F98DE /* DifferentServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifferentServices.swift; sourceTree = "<group>"; };
 		774FD60024E94A48009F98DE /* Extension+DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+DispatchQueue.swift"; sourceTree = "<group>"; };
@@ -153,6 +160,9 @@
 		774FD67C24E94BAE009F98DE /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		774FD67E24E94BAE009F98DE /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		774FD68024E94BAE009F98DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A8FC7F46173C27D08DD8003 /* Pods-Strange Jewel Collector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Strange Jewel Collector.debug.xcconfig"; path = "Target Support Files/Pods-Strange Jewel Collector/Pods-Strange Jewel Collector.debug.xcconfig"; sourceTree = "<group>"; };
+		C6B24A26AB8D269DA25BF12B /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		E35B6F07469B3869AC57A548 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +174,7 @@
 				774FD5F624E947FC009F98DE /* Lottie in Frameworks */,
 				774FD5F924E94851009F98DE /* DeviceKit in Frameworks */,
 				774FD5FC24E948F2009F98DE /* FacebookCore in Frameworks */,
+				A069E10A591A8D4BF9771287 /* libPods-Strange Jewel Collector.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,18 +182,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E389E065E29B6B500119A189 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		006986FA399CC58F51AF85B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				052DFBE88F1A0A7153CFA2B3 /* libPods-OneSignalNotificationServiceExtension.a */,
+				3C602D501F3D5561181AB522 /* libPods-Strange Jewel Collector.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		041C93D392C0E1766D191866 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6B24A26AB8D269DA25BF12B /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				E35B6F07469B3869AC57A548 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				9A8FC7F46173C27D08DD8003 /* Pods-Strange Jewel Collector.debug.xcconfig */,
+				1DF240A2C1B55C26081BB912 /* Pods-Strange Jewel Collector.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		14733DF724E6E7B200298446 = {
 			isa = PBXGroup;
 			children = (
 				14733E0224E6E7B200298446 /* Strange Jewel Collector */,
 				774FD67D24E94BAE009F98DE /* OneSignalNotificationServiceExtension */,
 				14733E0124E6E7B200298446 /* Products */,
+				041C93D392C0E1766D191866 /* Pods */,
+				006986FA399CC58F51AF85B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +232,7 @@
 		14733E0224E6E7B200298446 /* Strange Jewel Collector */ = {
 			isa = PBXGroup;
 			children = (
+				14C6246724EA692300F625E6 /* Strange Jewel Collector.entitlements */,
 				14733E1124E6E7B600298446 /* Info.plist */,
 				774FD5F024E9469D009F98DE /* App */,
 				774FD63924E94AA8009F98DE /* Model */,
@@ -379,16 +414,16 @@
 		774FD64024E94AA8009F98DE /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				774FD64A24E94AA8009F98DE /* Level_1.json */,
 				774FD64124E94AA8009F98DE /* Level_2.json */,
 				774FD64224E94AA8009F98DE /* Level_3.json */,
-				774FD64324E94AA8009F98DE /* Level_8.json */,
 				774FD64424E94AA8009F98DE /* Level_4.json */,
 				774FD64524E94AA8009F98DE /* Level_5.json */,
-				774FD64624E94AA8009F98DE /* Level_9.json */,
 				774FD64724E94AA8009F98DE /* Level_6.json */,
-				774FD64824E94AA8009F98DE /* Level_10.json */,
 				774FD64924E94AA8009F98DE /* Level_7.json */,
-				774FD64A24E94AA8009F98DE /* Level_1.json */,
+				774FD64324E94AA8009F98DE /* Level_8.json */,
+				774FD64624E94AA8009F98DE /* Level_9.json */,
+				774FD64824E94AA8009F98DE /* Level_10.json */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -396,6 +431,7 @@
 		774FD67D24E94BAE009F98DE /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
+				14C6246624EA664100F625E6 /* OneSignalNotificationServiceExtension.entitlements */,
 				774FD67E24E94BAE009F98DE /* NotificationService.swift */,
 				774FD68024E94BAE009F98DE /* Info.plist */,
 			);
@@ -409,6 +445,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14733E1424E6E7B600298446 /* Build configuration list for PBXNativeTarget "Strange Jewel Collector" */;
 			buildPhases = (
+				D80E07A6A2CB9C7D38CE355B /* [CP] Check Pods Manifest.lock */,
 				14733DFC24E6E7B200298446 /* Sources */,
 				14733DFD24E6E7B200298446 /* Frameworks */,
 				14733DFE24E6E7B200298446 /* Resources */,
@@ -434,6 +471,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 774FD68424E94BAE009F98DE /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
+				76A9943E8884A22BCECBF8B9 /* [CP] Check Pods Manifest.lock */,
 				774FD67824E94BAE009F98DE /* Sources */,
 				774FD67924E94BAE009F98DE /* Frameworks */,
 				774FD67A24E94BAE009F98DE /* Resources */,
@@ -531,6 +569,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76A9943E8884A22BCECBF8B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D80E07A6A2CB9C7D38CE355B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Strange Jewel Collector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14733DFC24E6E7B200298446 /* Sources */ = {
@@ -715,9 +800,11 @@
 		};
 		14733E1524E6E7B600298446 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A8FC7F46173C27D08DD8003 /* Pods-Strange Jewel Collector.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Strange Jewel Collector/Strange Jewel Collector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
@@ -735,9 +822,11 @@
 		};
 		14733E1624E6E7B600298446 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DF240A2C1B55C26081BB912 /* Pods-Strange Jewel Collector.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Strange Jewel Collector/Strange Jewel Collector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
@@ -755,7 +844,9 @@
 		};
 		774FD68524E94BAE009F98DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B24A26AB8D269DA25BF12B /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
@@ -775,7 +866,9 @@
 		};
 		774FD68624E94BAE009F98DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E35B6F07469B3869AC57A548 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
