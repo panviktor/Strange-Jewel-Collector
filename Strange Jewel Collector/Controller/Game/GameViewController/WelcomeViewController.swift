@@ -44,9 +44,9 @@ class WelcomeViewController: UIViewController {
         rootView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         
         view.addSubview(itemElementImage)
-        itemElementImage.topAnchor.constraint(equalTo: view.topAnchor, constant: screenSize.size.height * 0.15 ).isActive = true
-        itemElementImage.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        itemElementImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        itemElementImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -10).isActive = true
+        itemElementImage.widthAnchor.constraint(equalToConstant: 425).isActive = true
+        itemElementImage.heightAnchor.constraint(equalToConstant: 425).isActive = true
         itemElementImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         view.addSubview(playButton)

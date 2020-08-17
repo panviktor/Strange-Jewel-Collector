@@ -11,6 +11,7 @@ enum ImageName {
     static let mainSceneCloud = "MainSceneCloud"
     static let mainScenePlayButton = "MainScenePlayButton"
     static let mainSceneSettingsButton = "MainSceneSettingsButton"
+    static let mainSceneChoosePresentButton = "MainSceneChoosePriseButton"
     static let mainSceneScoreButton = "MainSceneScoreButton"
     
     /// Game Scene Textures
@@ -25,6 +26,12 @@ enum ImageName {
     static let prize = "Pineapple"
     static let prizeMask = "PineappleMask"
     static let woodTexture = "Wood"
+    
+    static let physicalObjectOneTexture = "PhysicalObjectOneTexture"
+    static let physicalObjectTwoTexture = "PhysicalObjectTwoTexture"
+    static let physicalObjectThreeTexture = "PhysicalObjectThreeTexture"
+    static let physicalObjectFourTexture = "PhysicalObjectFourTexture"
+    
     static let exitButton = "ExitButton"
     
     /// End Chapter Scene Textures
@@ -50,6 +57,31 @@ enum ImageName {
     
     //FIXME: - Add Infobar Images
     ///Infobar
+    
+    /// Game Choose your Present
+    enum PresentScene {
+        static let presentSceneBackground = "PresentSceneBackground"
+        static let presentSceneTextLabel = "PresentSceneTextLabel"
+        static let presentSceneMainBoard = "PresentSceneMainBoard"
+        static let presentSceneBackButton = "PresentSceneBackButton"
+        static let presentSceneApplyButton = "PresentSceneApplyButton"
+        static let presentSceneRays = "PresentSceneRays"
+        
+        enum SkinPrice: Int, CaseIterable, CustomStringConvertible, Codable {
+            var description: String {
+                return "Present_\(self.rawValue)"
+            }
+            case Present_1 = 1
+            case Present_2
+            case Present_3
+            case Present_4
+            case Present_5
+            case Present_6
+            case Present_7
+            case Present_8
+            case Present_9
+        }
+    }
 }
 
 enum SoundFile {
@@ -57,6 +89,8 @@ enum SoundFile {
     static let slice = "Slice.caf"
     static let splash = "Splash.caf"
     static let nomNom = "NomNom.caf"
+    
+    static let priceSceneBackground = "PriceSceneBackground.mp3"
 }
 
 enum SoundType {
@@ -68,6 +102,7 @@ enum SoundType {
 enum BackgroundSoundType {
     case mainSceneBackground
     case topScoreSceneBackground
+    case priceSceneBackground
 }
 
 enum Layers {
@@ -75,10 +110,15 @@ enum Layers {
     static let emitter: CGFloat = 1
     static let crocodile: CGFloat = 1
     static let vine: CGFloat = 1
-   
     static let prize: CGFloat = 3
     static let foreground: CGFloat = 4
+    
     static let wood: CGFloat = 5
+    static let physicalObjectOne: CGFloat = 5
+    static let physicalObjectTwo: CGFloat = 5
+    static let physicalObjectTree: CGFloat = 5
+    static let physicalObjectFour: CGFloat = 5
+    
     static let infobar: CGFloat = 10
     static let exitButton: CGFloat = 10
 }
@@ -89,11 +129,16 @@ enum PhysicsCategoryBitMask {
     static let vine: UInt32 = 4
     static let prize: UInt32 = 8
     static let wood: UInt32 = 16
+    
+    static let physicalObjectOne: UInt32 = 16
+    static let physicalObjectTwo: UInt32 = 16
+    static let physicalObjectThree: UInt32 = 16
+    static let physicalObjectFour: UInt32 = 16
 }
 
 enum GameConfiguration {
     static let canCutMultipleVinesAtOnce = false
-    static let maximumLevel = 10
+    static let maximumLevel = 11
 }
 
 enum SceneParticles {
@@ -108,6 +153,12 @@ enum PrizeType: String {
 
 enum ObjectType: String, Codable {
     case wood = "Wood"
+    
+    case physicalObjectOne = "PhysicalObjectOne"
+    case physicalObjectTwo = "PhysicalObjectTwo"
+    case physicalObjectThree = "PhysicalObjectThree"
+    case physicalObjectFour = "PhysicalObjectFour"
+    
     case somethingNew = "SomethingNew"
     
     init(from decoder: Decoder) throws {
@@ -119,4 +170,13 @@ enum ObjectType: String, Codable {
 enum Emitter {
     static let rain = "Rain"
     static let dust = "Dust"
+}
+
+extension CaseIterable where Self: Equatable {
+    var allCases: AllCases { Self.allCases }
+    var next: Self {
+        let index = allCases.index(after: allCases.firstIndex(of: self)!)
+        guard index != allCases.endIndex else { return allCases.first! }
+        return allCases[index]
+    }
 }

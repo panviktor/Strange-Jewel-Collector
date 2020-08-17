@@ -35,5 +35,4 @@ void main()
         color.rgb *= color.a; // set background to alpha 0
         gl_FragColor = color;
     }
-    
 }

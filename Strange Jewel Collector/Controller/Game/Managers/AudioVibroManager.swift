@@ -66,6 +66,11 @@ final class AudioVibroManager {
                 throw AudioError.invalidFile
             }
             urlToPlay = url
+        case .priceSceneBackground:
+            guard let url = Bundle.main.url(forResource: SoundFile.priceSceneBackground, withExtension: nil) else {
+                throw AudioError.invalidFile
+            }
+            urlToPlay = url
         }
         backgroundMusic = try AVAudioPlayer(contentsOf: urlToPlay)
         backgroundMusic?.numberOfLoops = -1

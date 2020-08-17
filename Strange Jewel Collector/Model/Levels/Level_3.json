@@ -22,4 +22,16 @@
     "yAnchorPoint": 0.9588
   }
   ],
+  
+  "items": [
+      { "type": "PhysicalObjectThree",
+          "layer": 2,
+          "xPoint": 0.6592,
+          "yPoint": 0.5583,
+          "zRotation": 35,
+          "itemsSize": {
+              "width": 0.34,
+              "height": 0.4
+          }
+      }]
 }

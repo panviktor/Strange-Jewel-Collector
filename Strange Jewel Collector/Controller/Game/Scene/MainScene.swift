@@ -15,12 +15,14 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         case GameScene
         
         case GameSettingsScene
+        case PresentScene
         case TopScoreScene
     }
     
     private enum MainSceneButton: String {
         case PlayButton
         case SettingsButton
+        case PresentButton
         case ScoreButton
     }
     
@@ -61,19 +63,24 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         let root = SKSpriteNode()
         root.color = .clear
         root.name = "RootSKSpriteNode"
-        root.size = CGSize(width: screenSize.width, height: screenSize.height * 0.7)
-        root.position = CGPoint(x: screenSize.width / 2, y: screenSize.height / 1.5)
+        root.size = CGSize(width: screenSize.width, height: screenSize.height)
+        root.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        root.position = CGPoint(x: 0, y:  0)
+
         root.zPosition = -7
         self.addChild(root)
         
-        let bd_one_button = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: 0, offsetPosY: 140)
-        root.addChild(bd_one_button)
+        let playButton = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.75)
+        root.addChild(playButton)
         
-        let bd_two_button = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: 0, offsetPosY: 0)
-        root.addChild(bd_two_button)
+        let settingsButton = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: screenSize.width / 2,  offsetPosY: screenSize.height * 0.60)
+        root.addChild(settingsButton)
         
-        let bd_three_button = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: 0, offsetPosY: -140)
-        root.addChild(bd_three_button)
+        let priceButton = createUIButton(name: MainSceneButton.PresentButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.45)
+        root.addChild(priceButton)
+        
+        let scoreButton = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.30)
+        root.addChild(scoreButton)
         
         cloud.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 25, duration: 3),
                                                             SKAction.moveBy(x: 0, y: -25, duration: 3)])))
@@ -91,6 +98,8 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
                 prepareToChangeScene(scene: .GameScene)
             } else if c.name == MainSceneButton.SettingsButton.rawValue {
                 prepareToChangeScene(scene: .GameSettingsScene)
+            } else if c.name == MainSceneButton.PresentButton.rawValue {
+                 prepareToChangeScene(scene: .PresentScene)
             } else if c.name == MainSceneButton.ScoreButton.rawValue {
                 prepareToChangeScene(scene: .TopScoreScene)
             }
@@ -102,7 +111,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
                                 offsetPosY dy:CGFloat) -> SKSpriteNode {
         
         let button = SKSpriteNode()
-        button.anchorPoint = CGPoint(x: 0.5, y: 1)
+        button.anchorPoint = CGPoint(x: 0.5, y: 0)
         
         switch name {
         case .PlayButton:
@@ -111,6 +120,8 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             button.texture = SKTexture(imageNamed: ImageName.mainSceneSettingsButton)
         case .ScoreButton:
             button.texture = SKTexture(imageNamed: ImageName.mainSceneScoreButton)
+        case .PresentButton:
+            button.texture = SKTexture(imageNamed: ImageName.mainSceneChoosePresentButton)
         }
         
         button.position = CGPoint(x: dx, y: dy)
@@ -142,6 +153,12 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
             self.removeAllChildren()
             self.removeAllActions()
             let newScene = TopScoreScene(size: self.size)
+            self.view?.presentScene(newScene)
+        case .PresentScene:
+            self.recursiveRemovingSKActions(sknodes: self.children)
+            self.removeAllChildren()
+            self.removeAllActions()
+            let newScene = PresentScene(size: self.size)
             self.view?.presentScene(newScene)
         }
     }

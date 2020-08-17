@@ -29,6 +29,14 @@ final class GameManager {
         }
     }
     
+    private(set) var currentPresent: Int {
+        get {
+            return defaults.object(forKey: "currentPresent") as? Int ?? 5
+        } set (newValue) {
+            defaults.set(newValue, forKey: "currentPresent")
+        }
+    }
+    
     static let shared = GameManager()
     fileprivate init() {}
     
@@ -38,6 +46,10 @@ final class GameManager {
     
     func addScore() {
         currentScore += 1
+    }
+    
+    func setupPresent(number: Int) {
+        currentPresent = number
     }
     
     func resetAll() {

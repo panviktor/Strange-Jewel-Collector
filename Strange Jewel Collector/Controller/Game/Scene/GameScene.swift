@@ -29,9 +29,7 @@ class GameScene: SKScene {
     private var chapterIsOver = false
     private var didCutVine = false
     private let audioVibroManager = AudioVibroManager.shared
-    
-    //FIXME: - Add normal gravity
-    let startingDate = Date().addingTimeInterval(3)
+    internal let device = Device.current
     
     override func didMove(to view: SKView) {
         setUpLevel(number: currentLevelNum)
@@ -71,13 +69,28 @@ class GameScene: SKScene {
     }
     
     private func setUpPrize() {
-        prize = SKSpriteNode(imageNamed: ImageName.prize)
+        prize = SKSpriteNode(imageNamed: "\(ImageName.PresentScene.SkinPrice.init(rawValue: gameManager.currentPresent)?.description ?? ImageName.prize)")
         prize.position = CGPoint(x: size.width * level.prizePosition.x,
                                  y: level.prizePosition.y)
         prize.zPosition = Layers.prize
+        prize.size = CGSize(width: screenSize.width / 10, height: screenSize.width / 10)
+        
+        
+        //FIXME: - desired texture masks for acceptable performance
+        
+        //   if device.isSimulator {
+        //       prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
+        //   } else {
+        //       prize.physicsBody = SKPhysicsBody(texture: prize.texture!, size: prize.size)
+        //   }
+        
         prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
         prize.physicsBody?.categoryBitMask = PhysicsCategoryBitMask.prize
         prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.wood
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectOne
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectTwo
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectThree
+        prize.physicsBody?.collisionBitMask = PhysicsCategoryBitMask.physicalObjectFour
         prize.physicsBody?.density = 0.25
         
         addChild(prize)
@@ -91,13 +104,12 @@ class GameScene: SKScene {
             let anchorPoint = CGPoint(
                 x: vine.xAnchorPoint * size.width,
                 y: vine.yAnchorPoint * size.height)
-            let vine = VineNode(length: vine.length, anchorPoint: anchorPoint, name: "\(i)")
+            let vine = VineNode(length: vine.length, anchorPoint: anchorPoint, name: "VineNode_\(i)")
             
             vine.addToScene(self)
             vine.attachToPrize(prize)
         }
     }
-    
     
     //MARK: - Items methods
     private func setUpWoods() {
@@ -112,39 +124,63 @@ class GameScene: SKScene {
                     y: item.yPoint * size.height)
                 let rotation = item.zRotation ?? 360
                 addWoodToScene(position, rotation)
+            case .physicalObjectOne:
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addObjectOneToScene(position, rotation)
+            case .physicalObjectTwo:
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addObjectTwoToScene(position, rotation)
+            case .physicalObjectThree:
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addObjectThreeToScene(position, rotation)
+            case .physicalObjectFour:
+                let position = CGPoint(
+                    x: item.xPoint * size.width,
+                    y: item.yPoint * size.height)
+                let rotation = item.zRotation ?? 360
+                addObjectFourToScene(position, rotation)
             default:
                 print("ADD NEW ITEMS HANDLER")
             }
         }
     }
     
-    
     //MARK: - Croc methods
     private func setUpCrocodile() {
         heroes = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
         heroes.setScale(0.95)
-        //FIXME: - load from level
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                   y: size.height * level.heroesPosition.y)
         
         heroes.zPosition = Layers.crocodile
-        heroes.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: ImageName.heroesMask),
-                                           size: heroes.size)
         
-        let sizeX = heroes.size.width * CGFloat(0.95)
-        let sizeY = heroes.size.height * CGFloat(0.90)
-        let newPhysicsBodySize = CGSize(width: sizeX, height: sizeY)
-
-        heroes.physicsBody = SKPhysicsBody(rectangleOf: newPhysicsBodySize)
+        if device.isSimulator {
+            let sizeX = heroes.size.width * CGFloat(0.95)
+            let sizeY = heroes.size.height * CGFloat(0.90)
+            let newPhysicsBodySize = CGSize(width: sizeX, height: sizeY)
+            heroes.physicsBody = SKPhysicsBody(rectangleOf: newPhysicsBodySize)
+        } else {
+            heroes.physicsBody = SKPhysicsBody(texture: heroes.texture!, size: heroes.size)
+        }
+        
         heroes.physicsBody!.categoryBitMask = PhysicsCategoryBitMask.crocodile
         heroes.physicsBody?.collisionBitMask = 0
         heroes.physicsBody?.contactTestBitMask = PhysicsCategoryBitMask.prize
         heroes.physicsBody?.isDynamic = false
         addChild(heroes)
-        animateCrocodile()
+        animateTheHero()
     }
     
-    private func animateCrocodile() {
+    private func animateTheHero() {
         let duration = Double.random(in: 2...4)
         let open = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthOpen))
         let wait = SKAction.wait(forDuration: duration)
@@ -224,6 +260,9 @@ class GameScene: SKScene {
         
         // if it has a name it must be a vine node
         if let name = node.name {
+            if !name.contains("VineNode_") {
+                return
+            }
             // snip the vine
             node.removeFromParent()
             
@@ -235,9 +274,11 @@ class GameScene: SKScene {
                 node.run(sequence)
             })
             
-            heroes.removeAllActions()
-            heroes.texture = SKTexture(imageNamed: ImageName.crocMouthOpen)
-            animateCrocodile()
+            if heroes != nil {
+                heroes.removeAllActions()
+                heroes.texture = SKTexture(imageNamed: ImageName.crocMouthOpen)
+                animateTheHero()
+            }
             run(audioVibroManager.getAction(type: .slice))
             didCutVine = true
         }
@@ -299,7 +340,8 @@ class GameScene: SKScene {
         exitButton.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         exitButton.size = CGSize(width: 50, height: 50)
         exitButton.zPosition = Layers.exitButton
-        exitButton.position = CGPoint(x: screenSize.width - exitButton.size.width - 15, y: screenSize.size.height - exitButton.size.height - infobar.size.height - extraPoin * 0.85 )
+        exitButton.position = CGPoint(x: screenSize.width - exitButton.size.width - 15,
+                                      y: screenSize.size.height - exitButton.size.height - infobar.size.height - extraPoin * 0.85 )
         exitButton.alpha = 0.25
         addChild(exitButton)
         
