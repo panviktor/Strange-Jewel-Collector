@@ -32,8 +32,8 @@ class WelcomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadGUI()
-        itemElementImage.rotate(5)
-        playButton.pulsate(100)
+        itemElementImage.pulsate(5)
+        playButton.pulsate(5)
     }
     
     private func loadGUI() {
