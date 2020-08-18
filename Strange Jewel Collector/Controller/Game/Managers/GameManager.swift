@@ -17,6 +17,17 @@ final class GameManager {
         } set (newValue) {
             if newValue <= GameConfiguration.maximumLevel {
                 defaults.set(newValue, forKey: "currentLevel")
+                maxUnlockedLevel = newValue
+            }
+        }
+    }
+    
+    private(set) var maxUnlockedLevel: Int  {
+        get {
+            return defaults.object(forKey: "maxUnlockedLevel") as? Int ?? 1
+        } set {
+            if newValue >= self.maxUnlockedLevel {
+               defaults.set(newValue, forKey: "maxUnlockedLevel")
             }
         }
     }
@@ -50,6 +61,12 @@ final class GameManager {
     
     func setupPresent(number: Int) {
         currentPresent = number
+    }
+    
+    func setupLevel(_ number: Int) {
+        if number <= currentLevel {
+            currentLevel = number
+        }
     }
     
     func resetAll() {

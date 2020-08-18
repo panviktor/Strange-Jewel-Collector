@@ -13,7 +13,7 @@ class LevelSelectorScene: SKScene {
         case Select
     }
     
-    private enum LevelSelectorScene: String {
+    private enum LevelSelectorSceneButton: String {
         case BackButton
     }
     
@@ -22,15 +22,17 @@ class LevelSelectorScene: SKScene {
     private let screenSize: CGRect = UIScreen.main.bounds
     private let audioVibroManager = AudioVibroManager.shared
     private let sceneManager = SceneManager.shared
+   
     private var gameTableView = GameLevelTableView()
     private var label: SKLabelNode?
     
     override func didMove(to view: SKView) {
-        self.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         loadBackground()
+        load()
         // Table setup
         gameTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        gameTableView.frame = CGRect(x:20,y:50,width:280,height:200)
+        gameTableView.frame = CGRect(x: screenSize.width * 0.01,  y:  screenSize.height * 0.25, width: screenSize.width * 0.98, height: screenSize.height * 0.65)
         self.scene?.view?.addSubview(gameTableView)
         gameTableView.reloadData()
     }
@@ -45,7 +47,7 @@ class LevelSelectorScene: SKScene {
         switch state {
         case .Select:
             for c in nodes(at: pos){
-                if c.name == LevelSelectorScene.BackButton.rawValue {
+                if c.name == LevelSelectorSceneButton.BackButton.rawValue {
                     backButtonPressed()
                 }
             }
@@ -53,11 +55,36 @@ class LevelSelectorScene: SKScene {
     }
     
     private func loadBackground() {
-        let loadBackground = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.gameSceneSettingsBackground))
-        loadBackground.anchorPoint = CGPoint(x: 0.0, y: 0.0)
+        let loadBackground = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.levelSelectorSceneBackground))
+        loadBackground.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         loadBackground.size = CGSize(width: screenSize.width, height: screenSize.height)
         loadBackground.zPosition = -10
         self.addChild(loadBackground)
+    }
+    
+    private func load(){
+        // Title
+        let title = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.levelSelectorSceneTitleLabel))
+        title.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        title.position.y = screenSize.size.height / 3
+        title.zPosition = -8
+        title.size = CGSize(width: screenSize.width * 0.6, height: screenSize.height * 0.12)
+        title.alpha = 0.95
+        title.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: -30, duration: 1),
+                                                            SKAction.scale(to: 1.5, duration: 1),
+                                                            SKAction.moveBy(x: 0, y: 30, duration: 1),
+                                                            SKAction.scale(to: 0.9, duration: 1)
+           ])))
+        self.addChild(title)
+        
+        // BackArrow
+        let backarrow = SKSpriteNode(texture: SKTexture(imageNamed: ImageName.levelSelectorSceneBackButton))
+        backarrow.name = LevelSelectorSceneButton.BackButton.rawValue
+        backarrow.anchorPoint = CGPoint(x: 1.0, y: 0.5)
+        backarrow.position = CGPoint(x: -title.size.width/2 - 10, y: title.position.y + 3)
+        backarrow.size = CGSize(width: screenSize.width/8, height: screenSize.height*0.06)
+        self.addChild(backarrow)
+        try? audioVibroManager.playMusic(type: .mainSceneBackground)
     }
     
     private func backButtonPressed(){

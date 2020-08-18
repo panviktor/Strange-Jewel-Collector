@@ -41,6 +41,11 @@ enum ImageName {
     /// Win Level Scene Texture
     static let winLevelSceneBackground = "WinLevelSceneBackground"
     
+    /// Level Selector Scene Texture
+    static let levelSelectorSceneBackground = "LevelSelectorSceneBackground"
+    static let levelSelectorSceneTitleLabel = "LevelSelectorSceneTitleLabel"
+    static let levelSelectorSceneBackButton = "LevelSelectorSceneBackButton"
+    
     /// Game Settings Scene Texture
     static let gameSceneSettingsBackground = "GameSceneSettingBackground"
     static let gameSceneSettingsTitleLabel = "GameSceneSettingsTitleLabel"
