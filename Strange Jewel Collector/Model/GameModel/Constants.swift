@@ -10,6 +10,7 @@ enum ImageName {
     static let mainSceneBackground = "MainSceneBackground"
     static let mainSceneCloud = "MainSceneCloud"
     static let mainScenePlayButton = "MainScenePlayButton"
+    static let mainSceneLevelButton = "MainSceneLevelButton"
     static let mainSceneSettingsButton = "MainSceneSettingsButton"
     static let mainSceneChoosePresentButton = "MainSceneChoosePriseButton"
     static let mainSceneScoreButton = "MainSceneScoreButton"
