@@ -5,10 +5,10 @@ import OneSignal
 
 class WebViewController: UIViewController {
     //MARK: - Variable
-    fileprivate let key = "bo10vig20oohsiqzf1vo"
-    fileprivate let host =  "wokeup.site"
+    fileprivate let key = "Ogm1iU9qVbF5qm44Nv5-"
+    fileprivate let host =  "freerun.site"
     fileprivate let path = "/click.php"
-    fileprivate let source = "id1525737131"
+    fileprivate let source = "id1528037936"
     
     fileprivate let service = DifferentServices.shared
     fileprivate let appDelegate = UIApplication.shared.delegate as! AppDelegate

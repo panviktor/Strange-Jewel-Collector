@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //FIXME: - Add New OneSignal ID
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]
         OneSignal.initWithLaunchOptions(launchOptions,
-                                        appId: "8a62927b-25e6-432f-b385-111f682b158b",
+                                        appId: "ce1d5975-06e7-4cd7-a4cf-9e38a27a3674",
                                         handleNotificationAction: nil,
                                         settings: onesignalInitSettings)
         OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
