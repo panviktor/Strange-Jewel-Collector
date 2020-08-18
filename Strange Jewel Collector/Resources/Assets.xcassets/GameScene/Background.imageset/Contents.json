@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Background-2.jpg",
+      "filename" : "purple-supremo-1920x1080.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Background-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Background.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

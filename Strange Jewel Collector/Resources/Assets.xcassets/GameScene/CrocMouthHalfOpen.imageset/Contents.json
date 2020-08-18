@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "abstract-colors-60359.jpg",
+      "filename" : "CrocMouthHalfOpen.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "CrocMouthHalfOpen-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "CrocMouthHalfOpen-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

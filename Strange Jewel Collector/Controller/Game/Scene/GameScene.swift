@@ -157,7 +157,7 @@ class GameScene: SKScene {
     //MARK: - Croc methods
     private func setUpCrocodile() {
         heroes = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
-        heroes.setScale(0.95)
+        heroes.setScale(0.4)
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                   y: size.height * level.heroesPosition.y)
         

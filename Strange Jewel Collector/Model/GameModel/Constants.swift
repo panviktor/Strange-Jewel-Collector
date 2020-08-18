@@ -22,6 +22,7 @@ enum ImageName {
     static let vineTexture = "VineTexture"
     static let vineHolder = "VineHolder"
     static let crocMouthClosed = "CrocMouthClosed"
+    static let crocMouthHalfOpen = "CrocMouthHalfOpen"
     static let crocMouthOpen = "CrocMouthOpen"
     static let heroesMask = "CrocMask"
     static let prize = "Pineapple"

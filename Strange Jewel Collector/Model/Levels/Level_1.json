@@ -2,7 +2,7 @@
     "levelName": "New Moon",
     "levelNumber": 1,
     
-    "heroesPosition": {"x": 0.80, "y": 0.3},
+    "heroesPosition": {"x": 0.80, "y": 0.2},
     "prizeType": 1,
     "prizePosition": {"x": 0.15, "y": 0.9},
     
