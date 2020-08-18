@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "upgrade.png",
+      "filename" : "UIHere.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "upgrade-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "upgrade-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

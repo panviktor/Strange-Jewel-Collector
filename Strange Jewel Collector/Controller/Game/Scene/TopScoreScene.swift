@@ -48,9 +48,9 @@ class TopScoreScene: SKScene {
         title.size = CGSize(width: screenSize.width * 0.6, height: screenSize.height * 0.12)
         title.alpha = 0.95
         title.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: -30, duration: 1),
-                                                            SKAction.scale(to: 1.5, duration: 1),
+                                                            SKAction.scale(to: 2.5, duration: 1),
                                                             SKAction.moveBy(x: 0, y: 30, duration: 1),
-                                                            SKAction.scale(to: 0.9, duration: 1)
+                                                            SKAction.scale(to: 0.5, duration: 1.5)
         ])))
         self.addChild(title)
         
@@ -76,7 +76,7 @@ class TopScoreScene: SKScene {
         let firstTextLine = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
         firstTextLine.text = "Completed \(gameManager.currentLevel) of \(GameConfiguration.maximumLevel) levels"
         firstTextLine.fontSize = screenSize.width / 15
-        firstTextLine.fontColor = SKColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        firstTextLine.fontColor = SKColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         firstTextLine.horizontalAlignmentMode = .center
         firstTextLine.verticalAlignmentMode = .center
         firstTextLine.position = CGPoint(x: scoreNode.position.x / 2,
@@ -88,7 +88,7 @@ class TopScoreScene: SKScene {
         let secondTextLine = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
         secondTextLine.text = "Collected \(gameManager.currentScore) points."
         secondTextLine.fontSize = screenSize.width / 15
-        secondTextLine.fontColor = SKColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        secondTextLine.fontColor = SKColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
         secondTextLine.horizontalAlignmentMode = .center
         secondTextLine.verticalAlignmentMode = .center
         secondTextLine.position = CGPoint(x: scoreNode.position.x / 2,
@@ -99,7 +99,7 @@ class TopScoreScene: SKScene {
         
         let thirdTextLine = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
         thirdTextLine.text = "Reset your progress?"
-        thirdTextLine.fontSize = screenSize.width / 14
+        thirdTextLine.fontSize = screenSize.width / 13
         thirdTextLine.fontColor = SKColor(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
         thirdTextLine.horizontalAlignmentMode = .center
         thirdTextLine.verticalAlignmentMode = .center

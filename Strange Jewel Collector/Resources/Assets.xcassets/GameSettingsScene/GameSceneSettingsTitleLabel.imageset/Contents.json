@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "GameSceneSettingsTitleLabel.png",
+      "filename" : "5f3c0adebf75b.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "GameSceneSettingsTitleLabel-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "GameSceneSettingsTitleLabel-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
