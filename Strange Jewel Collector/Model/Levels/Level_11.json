@@ -2,7 +2,7 @@
     "levelName": "Doom",
     "levelNumber": 11,
     
-    "heroesPosition": {"x": 0.553, "y": 0.312},
+    "heroesPosition": {"x": 0.553, "y": 0.2},
     "prizeType": 1,
     "prizePosition": {"x": 0.2, "y": 0.908},
     

@@ -2,7 +2,7 @@
     "levelName": "Wind",
     "levelNumber": 9,
     
-    "heroesPosition": {"x": 0.45, "y": 0.312},
+    "heroesPosition": {"x": 0.45, "y": 0.2},
     "prizeType": 1,
     "prizePosition": {"x": 0.8, "y": 0.8},
     

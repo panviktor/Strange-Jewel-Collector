@@ -2,7 +2,7 @@
   "levelName": "Ghost",
   "levelNumber": 3,
   
-  "heroesPosition": {"x": 0.35, "y": 0.312},
+  "heroesPosition": {"x": 0.35, "y": 0.212},
   "prizeType": 1,
   "prizePosition": {"x": 0.55, "y": 0.9},
   
