@@ -199,7 +199,7 @@ class PresentScene: SKScene {
         self.addChild(avatar)
         avatar.run(sequenceAvatar)
         
-        delay(bySeconds: 20) {
+        delay(bySeconds: 10) {
             let fadeScreenToRemove = self.childNode(withName: "FadeScreen\(present.description)")
             fadeScreenToRemove?.removeFromParent()
             

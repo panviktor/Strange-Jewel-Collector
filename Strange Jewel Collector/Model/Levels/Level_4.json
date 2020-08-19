@@ -1,14 +1,14 @@
 {
-  "levelName": "Silence",
+  "levelName": "Sapphire",
   "levelNumber": 4,
   
-  "heroesPosition": {"x": 0.45, "y": 0.2},
+  "heroesPosition": {"x": 0.35, "y": 0.2},
   "prizeType": 1,
   "prizePosition": {"x": 0.7, "y": 0.95},
   
   "vines": [
   {  "length": 13,
-    "xAnchorPoint": 0.85,
+    "xAnchorPoint": 0.859,
     "yAnchorPoint": 0.8996
   },
   {

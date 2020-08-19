@@ -1,31 +1,31 @@
 {
-    "levelName": "Repose",
+    "levelName": "Candy",
     "levelNumber": 5,
     
-    "heroesPosition": {"x": 0.45, "y": 0.2},
+    "heroesPosition": {"x": 0.43, "y": 0.2},
     "prizeType": 1,
-    "prizePosition": {"x": 0.8, "y": 0.95},
+    "prizePosition": {"x": 0.85, "y": 0.95},
     
     "vines": [
         {  "length": 13,
             "xAnchorPoint": 0.95,
-            "yAnchorPoint": 0.8696
+            "yAnchorPoint": 0.8796
         },
         {  "length": 12,
             "xAnchorPoint": 0.1592,
-            "yAnchorPoint": 0.9296
+            "yAnchorPoint": 0.9196
         },
         {
             "length": 14,
-            "xAnchorPoint": 0.0993,
-            "yAnchorPoint": 0.7588
+            "xAnchorPoint": 0.0983,
+            "yAnchorPoint": 0.7488
         }
     ],
     
     "items": [
         { "type": "PhysicalObjectOne",
             "layer": 2,
-            "xPoint": 0.1592,
+            "xPoint": 0.1692,
             "yPoint": 0.4600,
             "zRotation": 3,
             "itemsSize": {
@@ -37,7 +37,7 @@
         { "type": "PhysicalObjectOne",
             "layer": 2,
             "xPoint": 0.8592,
-            "yPoint": 0.7650,
+            "yPoint": 0.7550,
             "zRotation": 3,
             "itemsSize": {
                 "width": 0.34,
@@ -48,8 +48,8 @@
         
         { "type": "PhysicalObjectTwo",
             "layer": 2,
-            "xPoint": 0.1502,
-            "yPoint": 0.8200,
+            "xPoint": 0.1602,
+            "yPoint": 0.8300,
             "zRotation": 2,
             "itemsSize": {
                 "width": 0.34,

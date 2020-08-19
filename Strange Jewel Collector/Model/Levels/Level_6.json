@@ -1,8 +1,8 @@
 {
-    "levelName": "Quietness",
+    "levelName": "Sweet",
     "levelNumber": 6,
     
-    "heroesPosition": {"x": 0.45, "y": 0.312},
+    "heroesPosition": {"x": 0.45, "y": 0.212},
     "prizeType": 1,
     "prizePosition": {"x": 0.97, "y": 0.98},
     

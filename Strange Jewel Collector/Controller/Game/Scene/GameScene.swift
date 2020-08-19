@@ -157,7 +157,8 @@ class GameScene: SKScene {
     //MARK: - Croc methods
     private func setUpCrocodile() {
         heroes = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
-        heroes.setScale(0.4)
+        heroes.size = CGSize(width: screenSize.width / 5.5, height:  screenSize.height / 5.5)
+        
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                   y: size.height * level.heroesPosition.y)
         
@@ -183,9 +184,10 @@ class GameScene: SKScene {
     private func animateTheHero() {
         let duration = Double.random(in: 2...4)
         let open = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthOpen))
+        let halfOpen = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthHalfOpen))
         let wait = SKAction.wait(forDuration: duration)
         let close = SKAction.setTexture(SKTexture(imageNamed: ImageName.crocMouthClosed))
-        let sequence = SKAction.sequence([wait, open, wait, close])
+        let sequence = SKAction.sequence([wait, open, wait, halfOpen, wait, close])
         heroes.run(.repeatForever(sequence))
     }
     

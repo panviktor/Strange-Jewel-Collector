@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1405C85124EBB71F0049151E /* GameLevelTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1405C85024EBB71F0049151E /* GameLevelTableView.swift */; };
 		1405C85324EBBF0E0049151E /* LevelSelectorScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1405C85224EBBF0E0049151E /* LevelSelectorScene.swift */; };
+		14689F3024ED2D8B004E7677 /* CheeZeeJungle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14689F2F24ED2D8B004E7677 /* CheeZeeJungle.mp3 */; };
+		14689F3424ED34B3004E7677 /* NomNom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14689F3324ED2E7B004E7677 /* NomNom.caf */; };
 		14733E0424E6E7B200298446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14733E0324E6E7B200298446 /* AppDelegate.swift */; };
 		14F7057A24EAD6DE001A2B77 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7056A24EAD6DE001A2B77 /* SceneManager.swift */; };
 		14F7057B24EAD6DE001A2B77 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7056B24EAD6DE001A2B77 /* GameManager.swift */; };
@@ -30,8 +32,6 @@
 		14F7059924EAD741001A2B77 /* gradientMonoTone.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 14F7058C24EAD73F001A2B77 /* gradientMonoTone.fsh */; };
 		14F7059A24EAD741001A2B77 /* Particle.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F7058D24EAD73F001A2B77 /* Particle.png */; };
 		14F7059B24EAD741001A2B77 /* PriceSceneBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14F7058F24EAD73F001A2B77 /* PriceSceneBackground.mp3 */; };
-		14F7059C24EAD741001A2B77 /* CheeZeeJungle.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14F7059024EAD73F001A2B77 /* CheeZeeJungle.caf */; };
-		14F7059D24EAD741001A2B77 /* NomNom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14F7059124EAD73F001A2B77 /* NomNom.caf */; };
 		14F7059E24EAD741001A2B77 /* Slice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14F7059224EAD73F001A2B77 /* Slice.caf */; };
 		14F7059F24EAD741001A2B77 /* Splash.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14F7059324EAD73F001A2B77 /* Splash.caf */; };
 		14F705A024EAD741001A2B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F7059424EAD741001A2B77 /* Assets.xcassets */; };
@@ -105,6 +105,8 @@
 		052DFBE88F1A0A7153CFA2B3 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1405C85024EBB71F0049151E /* GameLevelTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelTableView.swift; sourceTree = "<group>"; };
 		1405C85224EBBF0E0049151E /* LevelSelectorScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectorScene.swift; sourceTree = "<group>"; };
+		14689F2F24ED2D8B004E7677 /* CheeZeeJungle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CheeZeeJungle.mp3; sourceTree = "<group>"; };
+		14689F3324ED2E7B004E7677 /* NomNom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NomNom.caf; sourceTree = "<group>"; };
 		14733E0024E6E7B200298446 /* Strange Jewel Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Strange Jewel Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14733E0324E6E7B200298446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14733E1124E6E7B600298446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,8 +132,6 @@
 		14F7058C24EAD73F001A2B77 /* gradientMonoTone.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gradientMonoTone.fsh; sourceTree = "<group>"; };
 		14F7058D24EAD73F001A2B77 /* Particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle.png; sourceTree = "<group>"; };
 		14F7058F24EAD73F001A2B77 /* PriceSceneBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PriceSceneBackground.mp3; sourceTree = "<group>"; };
-		14F7059024EAD73F001A2B77 /* CheeZeeJungle.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CheeZeeJungle.caf; sourceTree = "<group>"; };
-		14F7059124EAD73F001A2B77 /* NomNom.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NomNom.caf; sourceTree = "<group>"; };
 		14F7059224EAD73F001A2B77 /* Slice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Slice.caf; sourceTree = "<group>"; };
 		14F7059324EAD73F001A2B77 /* Splash.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Splash.caf; sourceTree = "<group>"; };
 		14F7059424EAD741001A2B77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -307,9 +307,9 @@
 		14F7058E24EAD73F001A2B77 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				14689F2F24ED2D8B004E7677 /* CheeZeeJungle.mp3 */,
+				14689F3324ED2E7B004E7677 /* NomNom.caf */,
 				14F7058F24EAD73F001A2B77 /* PriceSceneBackground.mp3 */,
-				14F7059024EAD73F001A2B77 /* CheeZeeJungle.caf */,
-				14F7059124EAD73F001A2B77 /* NomNom.caf */,
 				14F7059224EAD73F001A2B77 /* Slice.caf */,
 				14F7059324EAD73F001A2B77 /* Splash.caf */,
 			);
@@ -554,9 +554,9 @@
 				14F7059924EAD741001A2B77 /* gradientMonoTone.fsh in Resources */,
 				14F705BB24EAD774001A2B77 /* Level_8.json in Resources */,
 				14F705BE24EAD774001A2B77 /* Level_9.json in Resources */,
-				14F7059C24EAD741001A2B77 /* CheeZeeJungle.caf in Resources */,
 				14F7059724EAD741001A2B77 /* Rain.sks in Resources */,
 				14F705C024EAD774001A2B77 /* Level_10.json in Resources */,
+				14689F3024ED2D8B004E7677 /* CheeZeeJungle.mp3 in Resources */,
 				14F705BD24EAD774001A2B77 /* Level_5.json in Resources */,
 				14F7059A24EAD741001A2B77 /* Particle.png in Resources */,
 				14F7059F24EAD741001A2B77 /* Splash.caf in Resources */,
@@ -569,13 +569,13 @@
 				14F7059624EAD741001A2B77 /* Particle.sks in Resources */,
 				14F705BC24EAD774001A2B77 /* Level_4.json in Resources */,
 				14F705BA24EAD774001A2B77 /* Level_3.json in Resources */,
-				14F7059D24EAD741001A2B77 /* NomNom.caf in Resources */,
 				14F7059B24EAD741001A2B77 /* PriceSceneBackground.mp3 in Resources */,
 				14F705A124EAD741001A2B77 /* no-internet-connection.json in Resources */,
 				14F705B924EAD774001A2B77 /* Level_2.json in Resources */,
 				774FD64C24E94AA8009F98DE /* LaunchScreen.storyboard in Resources */,
 				14F705C124EAD774001A2B77 /* Level_11.json in Resources */,
 				14F7059E24EAD741001A2B77 /* Slice.caf in Resources */,
+				14689F3424ED34B3004E7677 /* NomNom.caf in Resources */,
 				14F705C224EAD774001A2B77 /* Level_7.json in Resources */,
 				14F705A024EAD741001A2B77 /* Assets.xcassets in Resources */,
 			);
