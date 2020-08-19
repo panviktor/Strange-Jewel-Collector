@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "PriceSceneBackButton.png",
+      "filename" : "exit.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
