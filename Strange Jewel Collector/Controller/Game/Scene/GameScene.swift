@@ -29,6 +29,7 @@ class GameScene: SKScene {
     private var chapterIsOver = false
     private var didCutVine = false
     private let audioVibroManager = AudioVibroManager.shared
+    
     internal let device = Device.current
     
     override func didMove(to view: SKView) {
@@ -64,7 +65,6 @@ class GameScene: SKScene {
         emitter.position = CGPoint(x: size.width / 2, y: size.height)
         emitter.advanceSimulationTime(30)
         addChild(emitter)
-        
         addChild(water)
     }
     
@@ -157,7 +157,12 @@ class GameScene: SKScene {
     //MARK: - Croc methods
     private func setUpCrocodile() {
         heroes = SKSpriteNode(imageNamed: ImageName.crocMouthClosed)
-        heroes.size = CGSize(width: screenSize.width / 5.5, height:  screenSize.height / 5.5)
+        
+        if device.hasRoundedDisplayCorners {
+            heroes.size = CGSize(width: screenSize.width / 5.5, height:  screenSize.height / 5)
+        } else {
+            heroes.size = CGSize(width: screenSize.width / 5.5, height:  screenSize.height / 4)
+        }
         
         heroes.position = CGPoint(x: size.width * level.heroesPosition.x,
                                   y: size.height * level.heroesPosition.y)

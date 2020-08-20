@@ -47,10 +47,10 @@ class TopScoreScene: SKScene {
         title.zPosition = -8
         title.size = CGSize(width: screenSize.width * 0.6, height: screenSize.height * 0.12)
         title.alpha = 0.95
-        title.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: -30, duration: 1),
-                                                            SKAction.scale(to: 2.5, duration: 1),
-                                                            SKAction.moveBy(x: 0, y: 30, duration: 1),
-                                                            SKAction.scale(to: 0.5, duration: 1.5)
+        title.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: -20, duration: 0.1),
+                                                            SKAction.scale(to: 1.5, duration: 0.5),
+                                                            SKAction.moveBy(x: 0, y: 20, duration: 1),
+                                                            SKAction.scale(to: 1.9, duration: 1.5)
         ])))
         self.addChild(title)
         
@@ -100,7 +100,7 @@ class TopScoreScene: SKScene {
         let thirdTextLine = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
         thirdTextLine.text = "Reset your progress?"
         thirdTextLine.fontSize = screenSize.width / 13
-        thirdTextLine.fontColor = SKColor(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
+        thirdTextLine.fontColor = SKColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
         thirdTextLine.horizontalAlignmentMode = .center
         thirdTextLine.verticalAlignmentMode = .center
         thirdTextLine.position = CGPoint(x: scoreNode.position.x / 2,

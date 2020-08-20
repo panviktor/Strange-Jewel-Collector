@@ -76,13 +76,13 @@ class Infobar: SKSpriteNode {
             thirdHeart.size = CGSize(width: node.size.width / 6, height: node.size.height / 2)
             
             //FIXME: - Remove: node.alpha = 0
-            node.alpha = 0
+            node.alpha = 0.75
             node.addChild(thirdHeart)
             
         case .Second:
             let labelText = SKLabelNode(fontNamed: "KohinoorTelugu-Medium")
             labelText.text = "Level Name First"
-            labelText.fontSize = 25
+            labelText.fontSize = 30
             labelText.fontColor = SKColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
             labelText.horizontalAlignmentMode = .center
             labelText.verticalAlignmentMode = .center
