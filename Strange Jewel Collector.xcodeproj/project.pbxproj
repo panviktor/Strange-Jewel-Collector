@@ -12,6 +12,8 @@
 		14689F3024ED2D8B004E7677 /* CheeZeeJungle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14689F2F24ED2D8B004E7677 /* CheeZeeJungle.mp3 */; };
 		14689F3424ED34B3004E7677 /* NomNom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14689F3324ED2E7B004E7677 /* NomNom.caf */; };
 		14733E0424E6E7B200298446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14733E0324E6E7B200298446 /* AppDelegate.swift */; };
+		14AF1D1A24F5348400F16DDE /* SHKWater.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 14AF1D1924F5348400F16DDE /* SHKWater.fsh */; };
+		14AF1D1C24F5354C00F16DDE /* Extension+SKShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF1D1B24F5354C00F16DDE /* Extension+SKShader.swift */; };
 		14F7057A24EAD6DE001A2B77 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7056A24EAD6DE001A2B77 /* SceneManager.swift */; };
 		14F7057B24EAD6DE001A2B77 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7056B24EAD6DE001A2B77 /* GameManager.swift */; };
 		14F7057C24EAD6DE001A2B77 /* AudioVibroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7056C24EAD6DE001A2B77 /* AudioVibroManager.swift */; };
@@ -110,6 +112,8 @@
 		14733E0024E6E7B200298446 /* Strange Jewel Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Strange Jewel Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14733E0324E6E7B200298446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14733E1124E6E7B600298446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AF1D1924F5348400F16DDE /* SHKWater.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKWater.fsh; sourceTree = "<group>"; };
+		14AF1D1B24F5354C00F16DDE /* Extension+SKShader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SKShader.swift"; sourceTree = "<group>"; };
 		14C6246624EA664100F625E6 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		14C6246724EA692300F625E6 /* Strange Jewel Collector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Strange Jewel Collector.entitlements"; sourceTree = "<group>"; };
 		14F7056A24EAD6DE001A2B77 /* SceneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
@@ -364,6 +368,7 @@
 				774FD60124E94A48009F98DE /* Extension+URL.swift */,
 				774FD60224E94A48009F98DE /* Extensions+Game.swift */,
 				774FD60324E94A48009F98DE /* Extension+Collection.swift */,
+				14AF1D1B24F5354C00F16DDE /* Extension+SKShader.swift */,
 				774FD60424E94A48009F98DE /* Extension+UIView.swift */,
 				774FD60524E94A48009F98DE /* Extension+WKWebView.swift */,
 			);
@@ -400,6 +405,7 @@
 		774FD61624E94AA7009F98DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14AF1D1924F5348400F16DDE /* SHKWater.fsh */,
 				14F7059424EAD741001A2B77 /* Assets.xcassets */,
 				14F7059524EAD741001A2B77 /* no-internet-connection.json */,
 				14F7058824EAD73F001A2B77 /* Particles */,
@@ -571,6 +577,7 @@
 				14F705BA24EAD774001A2B77 /* Level_3.json in Resources */,
 				14F7059B24EAD741001A2B77 /* PriceSceneBackground.mp3 in Resources */,
 				14F705A124EAD741001A2B77 /* no-internet-connection.json in Resources */,
+				14AF1D1A24F5348400F16DDE /* SHKWater.fsh in Resources */,
 				14F705B924EAD774001A2B77 /* Level_2.json in Resources */,
 				774FD64C24E94AA8009F98DE /* LaunchScreen.storyboard in Resources */,
 				14F705C124EAD774001A2B77 /* Level_11.json in Resources */,
@@ -672,6 +679,7 @@
 				774FD60B24E94A48009F98DE /* Extension+Collection.swift in Sources */,
 				14F705B824EAD774001A2B77 /* Level.swift in Sources */,
 				14F7058424EAD6DE001A2B77 /* WinLevelScene.swift in Sources */,
+				14AF1D1C24F5354C00F16DDE /* Extension+SKShader.swift in Sources */,
 				774FD65C24E94AA8009F98DE /* GIFViewController.swift in Sources */,
 				14F705B624EAD774001A2B77 /* Extension+GameScene+AddElements.swift in Sources */,
 				14F705B424EAD774001A2B77 /* Constants.swift in Sources */,
@@ -758,7 +766,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -812,7 +820,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -830,14 +838,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Strange Jewel Collector/Strange Jewel Collector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -853,14 +862,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Strange Jewel Collector/Strange Jewel Collector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -874,14 +884,16 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector.OneSignalNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -896,14 +908,16 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector.OneSignalNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

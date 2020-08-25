@@ -32,10 +32,14 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
     private let audioVibroManager = AudioVibroManager.shared
     private let screenSize: CGRect = UIScreen.main.bounds
     
+    typealias ShaderExample = (title: String, shader: SKShader)
+    private var shaders = [ShaderExample]()
+    
     override func didMove(to view: SKView) {
         guard sceneManager.mainScene == nil else { return }
         sceneManager.mainScene = self
         removeUIViews()
+        shaders.append(("Water", createWater()))
         // Setting up delegate for Physics World & Set up gravity
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
@@ -51,6 +55,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         mainSceneBackground.size = CGSize(width: screenSize.width, height: screenSize.height)
         mainSceneBackground.zPosition = -10
         mainSceneBackground.name = ImageName.mainSceneBackground
+        mainSceneBackground.shader = shaders[0].shader
         self.addChild(mainSceneBackground)
         
         let cloud = SKSpriteNode()
@@ -60,6 +65,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         cloud.zPosition = -9
         cloud.name = ImageName.mainSceneCloud
         cloud.alpha = 0.8
+        cloud.shader = shaders[0].shader
         self.addChild(cloud)
         
         let root = SKSpriteNode()
@@ -72,19 +78,24 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         root.zPosition = -7
         self.addChild(root)
         
-        let playButton = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.80)
+        let playButton = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: screenSize.width / 2,
+                                        offsetPosY: screenSize.height * 0.80)
         root.addChild(playButton)
         
-        let levelButton = createUIButton(name: MainSceneButton.LevelSceneButton, offsetPosX: screenSize.width / 2,  offsetPosY: screenSize.height * 0.65)
+        let levelButton = createUIButton(name: MainSceneButton.LevelSceneButton, offsetPosX: screenSize.width / 2,
+                                         offsetPosY: screenSize.height * 0.65)
         root.addChild(levelButton)
         
-        let settingsButton = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: screenSize.width / 2,  offsetPosY: screenSize.height * 0.50)
+        let settingsButton = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: screenSize.width / 2,
+                                            offsetPosY: screenSize.height * 0.50)
         root.addChild(settingsButton)
         
-        let priceButton = createUIButton(name: MainSceneButton.PresentButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.35)
+        let priceButton = createUIButton(name: MainSceneButton.PresentButton, offsetPosX: screenSize.width / 2,
+                                         offsetPosY: screenSize.height * 0.35)
         root.addChild(priceButton)
         
-        let scoreButton = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: screenSize.width / 2, offsetPosY: screenSize.height * 0.20)
+        let scoreButton = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: screenSize.width / 2,
+                                         offsetPosY: screenSize.height * 0.20)
         root.addChild(scoreButton)
         
         cloud.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 25, duration: 3),
@@ -172,5 +183,14 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         self.recursiveRemovingSKActions(sknodes: self.children)
         self.removeAllChildren()
         self.removeAllActions()
+    }
+    
+    private func createWater() -> SKShader {
+        let uniforms: [SKUniform] = [
+            SKUniform(name: "u_speed", float: 3),
+            SKUniform(name: "u_strength", float: 2.5),
+            SKUniform(name: "u_frequency", float: 10)
+        ]
+        return SKShader(fromFile: "SHKWater", uniforms: uniforms)
     }
 }

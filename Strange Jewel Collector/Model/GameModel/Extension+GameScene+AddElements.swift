@@ -11,7 +11,7 @@ import SpriteKit
 extension GameScene {
     func addWoodToScene(_ position: CGPoint, _ rotation: CGFloat) {
         let wood = SKSpriteNode(imageNamed: ImageName.woodTexture)
-        wood.size = CGSize(width: 100, height: 10)
+        wood.size = CGSize(width: 100, height: 11)
         wood.position = CGPoint(x: position.x, y: position.y)
         wood.zRotation = .pi / rotation
         wood.zPosition = Layers.wood
@@ -119,6 +119,5 @@ extension GameScene {
         print(#line, #function)
         addChild(object)
     }
-    
 }
 

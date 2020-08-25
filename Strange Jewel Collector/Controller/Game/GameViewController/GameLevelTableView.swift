@@ -27,7 +27,7 @@ class GameLevelTableView: UITableView, UITableViewDelegate, UITableViewDataSourc
         self.delegate = self
         self.dataSource = self
         self.backgroundColor = .clear
-        self.layer.cornerRadius = 15
+        self.layer.cornerRadius = 14
         self.clipsToBounds = true
     }
     required init?(coder aDecoder: NSCoder) {
