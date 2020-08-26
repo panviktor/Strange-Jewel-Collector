@@ -12,8 +12,10 @@
 		14689F3024ED2D8B004E7677 /* CheeZeeJungle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14689F2F24ED2D8B004E7677 /* CheeZeeJungle.mp3 */; };
 		14689F3424ED34B3004E7677 /* NomNom.caf in Resources */ = {isa = PBXBuildFile; fileRef = 14689F3324ED2E7B004E7677 /* NomNom.caf */; };
 		14733E0424E6E7B200298446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14733E0324E6E7B200298446 /* AppDelegate.swift */; };
+		14AEB71824F6883F00406A42 /* SHKCircleWaveRainbowBlended.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 14AEB71724F6883F00406A42 /* SHKCircleWaveRainbowBlended.fsh */; };
+		14AEB71C24F68BDC00406A42 /* Extension+ShaderKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AEB71B24F68BDC00406A42 /* Extension+ShaderKit.swift */; };
+		14AEB71E24F68D8D00406A42 /* SHKLightGrid.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 14AEB71D24F68D8A00406A42 /* SHKLightGrid.fsh */; };
 		14AF1D1A24F5348400F16DDE /* SHKWater.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 14AF1D1924F5348400F16DDE /* SHKWater.fsh */; };
-		14AF1D1C24F5354C00F16DDE /* Extension+SKShader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AF1D1B24F5354C00F16DDE /* Extension+SKShader.swift */; };
 		14F7057A24EAD6DE001A2B77 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7056A24EAD6DE001A2B77 /* SceneManager.swift */; };
 		14F7057B24EAD6DE001A2B77 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7056B24EAD6DE001A2B77 /* GameManager.swift */; };
 		14F7057C24EAD6DE001A2B77 /* AudioVibroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7056C24EAD6DE001A2B77 /* AudioVibroManager.swift */; };
@@ -112,8 +114,10 @@
 		14733E0024E6E7B200298446 /* Strange Jewel Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Strange Jewel Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14733E0324E6E7B200298446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14733E1124E6E7B600298446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AEB71724F6883F00406A42 /* SHKCircleWaveRainbowBlended.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = SHKCircleWaveRainbowBlended.fsh; sourceTree = "<group>"; };
+		14AEB71B24F68BDC00406A42 /* Extension+ShaderKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ShaderKit.swift"; sourceTree = "<group>"; };
+		14AEB71D24F68D8A00406A42 /* SHKLightGrid.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKLightGrid.fsh; sourceTree = "<group>"; };
 		14AF1D1924F5348400F16DDE /* SHKWater.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = SHKWater.fsh; sourceTree = "<group>"; };
-		14AF1D1B24F5354C00F16DDE /* Extension+SKShader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SKShader.swift"; sourceTree = "<group>"; };
 		14C6246624EA664100F625E6 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		14C6246724EA692300F625E6 /* Strange Jewel Collector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Strange Jewel Collector.entitlements"; sourceTree = "<group>"; };
 		14F7056A24EAD6DE001A2B77 /* SceneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
@@ -368,9 +372,9 @@
 				774FD60124E94A48009F98DE /* Extension+URL.swift */,
 				774FD60224E94A48009F98DE /* Extensions+Game.swift */,
 				774FD60324E94A48009F98DE /* Extension+Collection.swift */,
-				14AF1D1B24F5354C00F16DDE /* Extension+SKShader.swift */,
 				774FD60424E94A48009F98DE /* Extension+UIView.swift */,
 				774FD60524E94A48009F98DE /* Extension+WKWebView.swift */,
+				14AEB71B24F68BDC00406A42 /* Extension+ShaderKit.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -405,7 +409,9 @@
 		774FD61624E94AA7009F98DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14AEB71D24F68D8A00406A42 /* SHKLightGrid.fsh */,
 				14AF1D1924F5348400F16DDE /* SHKWater.fsh */,
+				14AEB71724F6883F00406A42 /* SHKCircleWaveRainbowBlended.fsh */,
 				14F7059424EAD741001A2B77 /* Assets.xcassets */,
 				14F7059524EAD741001A2B77 /* no-internet-connection.json */,
 				14F7058824EAD73F001A2B77 /* Particles */,
@@ -560,6 +566,7 @@
 				14F7059924EAD741001A2B77 /* gradientMonoTone.fsh in Resources */,
 				14F705BB24EAD774001A2B77 /* Level_8.json in Resources */,
 				14F705BE24EAD774001A2B77 /* Level_9.json in Resources */,
+				14AEB71E24F68D8D00406A42 /* SHKLightGrid.fsh in Resources */,
 				14F7059724EAD741001A2B77 /* Rain.sks in Resources */,
 				14F705C024EAD774001A2B77 /* Level_10.json in Resources */,
 				14689F3024ED2D8B004E7677 /* CheeZeeJungle.mp3 in Resources */,
@@ -579,6 +586,7 @@
 				14F705A124EAD741001A2B77 /* no-internet-connection.json in Resources */,
 				14AF1D1A24F5348400F16DDE /* SHKWater.fsh in Resources */,
 				14F705B924EAD774001A2B77 /* Level_2.json in Resources */,
+				14AEB71824F6883F00406A42 /* SHKCircleWaveRainbowBlended.fsh in Resources */,
 				774FD64C24E94AA8009F98DE /* LaunchScreen.storyboard in Resources */,
 				14F705C124EAD774001A2B77 /* Level_11.json in Resources */,
 				14F7059E24EAD741001A2B77 /* Slice.caf in Resources */,
@@ -678,8 +686,8 @@
 				14F7057C24EAD6DE001A2B77 /* AudioVibroManager.swift in Sources */,
 				774FD60B24E94A48009F98DE /* Extension+Collection.swift in Sources */,
 				14F705B824EAD774001A2B77 /* Level.swift in Sources */,
+				14AEB71C24F68BDC00406A42 /* Extension+ShaderKit.swift in Sources */,
 				14F7058424EAD6DE001A2B77 /* WinLevelScene.swift in Sources */,
-				14AF1D1C24F5354C00F16DDE /* Extension+SKShader.swift in Sources */,
 				774FD65C24E94AA8009F98DE /* GIFViewController.swift in Sources */,
 				14F705B624EAD774001A2B77 /* Extension+GameScene+AddElements.swift in Sources */,
 				14F705B424EAD774001A2B77 /* Constants.swift in Sources */,
@@ -838,7 +846,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Strange Jewel Collector/Strange Jewel Collector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -846,7 +854,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -862,7 +870,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Strange Jewel Collector/Strange Jewel Collector.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = "Strange Jewel Collector/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -870,7 +878,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -884,7 +892,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -893,7 +901,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector.OneSignalNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -908,7 +916,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2335GSPY5N;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -917,7 +925,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DenisMamonov.Strange-Jewel-Collector.OneSignalNotificationServiceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

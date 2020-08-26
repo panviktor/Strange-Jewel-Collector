@@ -39,7 +39,8 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         guard sceneManager.mainScene == nil else { return }
         sceneManager.mainScene = self
         removeUIViews()
-        shaders.append(("Water", createWater()))
+        shaders.append(("Water", SKShader.createWaterShader()))
+        shaders.append(("Color", SKShader.createLightGrid()))
         // Setting up delegate for Physics World & Set up gravity
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: -9.8)
@@ -80,26 +81,31 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         
         let playButton = createUIButton(name: MainSceneButton.PlayButton, offsetPosX: screenSize.width / 2,
                                         offsetPosY: screenSize.height * 0.80)
+//        playButton.shader = shaders[1].shader
         root.addChild(playButton)
         
         let levelButton = createUIButton(name: MainSceneButton.LevelSceneButton, offsetPosX: screenSize.width / 2,
                                          offsetPosY: screenSize.height * 0.65)
+//        levelButton.shader = shaders[1].shader
         root.addChild(levelButton)
         
         let settingsButton = createUIButton(name: MainSceneButton.SettingsButton, offsetPosX: screenSize.width / 2,
                                             offsetPosY: screenSize.height * 0.50)
+//        settingsButton.shader = shaders[1].shader
         root.addChild(settingsButton)
         
-        let priceButton = createUIButton(name: MainSceneButton.PresentButton, offsetPosX: screenSize.width / 2,
-                                         offsetPosY: screenSize.height * 0.35)
-        root.addChild(priceButton)
-        
         let scoreButton = createUIButton(name: MainSceneButton.ScoreButton, offsetPosX: screenSize.width / 2,
-                                         offsetPosY: screenSize.height * 0.20)
+                                         offsetPosY: screenSize.height * 0.35)
+//        scoreButton.shader = shaders[1].shader
         root.addChild(scoreButton)
         
-        cloud.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 25, duration: 3),
-                                                            SKAction.moveBy(x: 0, y: -25, duration: 3)])))
+        //FIXME: - add this button, when PriceMenu was refactoring
+        //        let priceButton = createUIButton(name: MainSceneButton.PresentButton, offsetPosX: screenSize.width / 2,
+        //                                         offsetPosY: screenSize.height * 0.25)
+        //        root.addChild(priceButton)
+        
+        cloud.run(SKAction.repeatForever(SKAction.sequence([SKAction.moveBy(x: 0, y: 28, duration: 2.5),
+                                                            SKAction.moveBy(x: 0, y: -28, duration: 2.5)])))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -145,7 +151,7 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         }
         
         button.position = CGPoint(x: dx, y: dy)
-        button.size = CGSize(width: screenSize.width / 4.5, height: screenSize.height / 8)
+        button.size = CGSize(width: screenSize.width / 2.5, height: screenSize.height / 8)
         button.name = name.rawValue
         button.alpha = 0.85
         return button
@@ -185,12 +191,40 @@ class MainScene: SKScene, SKPhysicsContactDelegate {
         self.removeAllActions()
     }
     
-    private func createWater() -> SKShader {
+
+}
+
+extension SKShader {
+    class func createWaterShader() -> SKShader {
         let uniforms: [SKUniform] = [
             SKUniform(name: "u_speed", float: 3),
             SKUniform(name: "u_strength", float: 2.5),
             SKUniform(name: "u_frequency", float: 10)
         ]
         return SKShader(fromFile: "SHKWater", uniforms: uniforms)
+    }
+    
+    class func createCircleWaveRainbowBlended() -> SKShader {
+        let uniforms: [SKUniform] = [
+            SKUniform(name: "u_speed", float: 1),
+            SKUniform(name: "u_brightness", float: 0.5),
+            SKUniform(name: "u_strength", float: 2),
+            SKUniform(name: "u_density", float: 100),
+            SKUniform(name: "u_center", point: CGPoint(x: 0.68, y: 0.33)),
+            SKUniform(name: "u_red", float: -1)
+        ]
+        
+        return SKShader(fromFile: "SHKCircleWaveRainbowBlended", uniforms: uniforms)
+    }
+    
+    class func createLightGrid() -> SKShader {
+        let uniforms: [SKUniform] = [
+            SKUniform(name: "u_density", float: 8),
+            SKUniform(name: "u_speed", float: 3),
+            SKUniform(name: "u_group_size", float: 2),
+            SKUniform(name: "u_brightness", float: 3),
+        ]
+        
+        return SKShader(fromFile: "SHKLightGrid", uniforms: uniforms)
     }
 }
